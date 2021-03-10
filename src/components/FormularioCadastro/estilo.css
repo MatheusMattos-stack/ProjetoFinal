@@ -1,0 +1,33 @@
+.form-cadastro {
+    margin : 25px;
+}
+
+.formulario-titulo {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin : 25px; 
+
+}
+
+.formulario-editar {
+    margin : 25px; 
+    width: 1000px;
+    height: 30px; 
+}
+
+.formulario-criar {
+    margin : 25px; 
+    width: 1000px;
+    height: 30px; 
+}
+
+.formulario-botao {
+    width: 150px;
+    height: 40px;
+    background-color: blueviolet; 
+    color: white;
+    cursor: pointer;
+    border: 1px solid blueviolet; 
+}
+

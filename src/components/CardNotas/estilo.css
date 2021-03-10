@@ -1,0 +1,19 @@
+.card-tarefa-botao-concluir:active { 
+    max-width: 40px;
+    margin: 10px;
+}
+
+.card-tarefa-botao-editar{
+    max-width: 40px; 
+    margin: 10px;
+}
+
+.card-tarefa-botao-excluir {
+    max-width: 40px;
+    margin: 10px;
+}
+
+.card-tarefa-texto {
+    margin: 10px;
+}
+
