@@ -48,7 +48,7 @@ class FormularioCadastro extends Component {
 
       {
         this.state.original !== '' && (
-          <p>Edição :  “{this.state.original}”</p>
+          <p className="formulario-texto">Edição :  “{this.state.original}”</p>
         )
       }
 
