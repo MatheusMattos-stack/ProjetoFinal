@@ -10,6 +10,10 @@
 
 }
 
+.formulario-texto{
+    color: black; 
+}
+
 .formulario-editar {
     margin : 25px; 
     width: 1000px;
@@ -31,3 +35,32 @@
     border: 1px solid blueviolet; 
 }
 
+
+@media screen and (max-width : 768px){
+
+    .formulario-titulo{
+        height: 10px;
+        justify-content: center;
+        min-width: 250px;
+    }
+
+    .formulario-criar, .formulario-editar {
+        margin : 25px; 
+        width: 85%;
+        height: 30px;
+        margin-top: 19%;
+    }
+
+    .formulario-botao{
+        margin : 23%; 
+        justify-content: center;
+        margin-top: 5%;
+        margin-left: 29%;
+    }
+
+    .formulario-texto{
+        margin-top: 20%;
+    }
+
+
+}

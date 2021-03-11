@@ -20,3 +20,19 @@
     font-size: 18px;
     color: blueviolet;
 }
+
+@media screen and (max-width : 768px){
+
+    .lista-notas_item {
+        margin : 23%; 
+        margin-top: 1%;
+        margin-left: 20%; 
+        text-align: center;
+        overflow-y: scroll;
+    }
+
+    .lista-notas {
+        margin: 2%;
+    }
+
+}
