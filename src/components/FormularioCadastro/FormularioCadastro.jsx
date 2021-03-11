@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import estilo from "./estilo.css";
 
 class FormularioCadastro extends Component {
-
   constructor(props){
     super(props);
     this.state = {
@@ -48,7 +47,7 @@ class FormularioCadastro extends Component {
 
       {
         this.state.original !== '' && (
-          <p className="formulario-texto">Edição :  “{this.state.original}”</p>
+          <p className="formulario-texto"> Edição :  “{this.state.original}”</p>
         )
       }
 
