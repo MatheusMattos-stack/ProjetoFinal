@@ -3,8 +3,9 @@
 }
 
 
-.lista-notas_item:active {
+.tarefa-concluir {
     text-decoration: line-through;
+    opacity: 0,5;
 
 }
 

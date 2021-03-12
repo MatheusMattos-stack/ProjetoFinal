@@ -17,6 +17,12 @@ class CardNotas extends Component {
 
   }
 
+  concluir(){
+    const indice = this.props.indice;
+    this.props.concluirNota(indice);
+  }
+
+
   render() {
     return (
 
@@ -25,7 +31,7 @@ class CardNotas extends Component {
 
       <section className="card-botoes-acao"> 
 
-          <img src= {concluirSVG} className="card-tarefa-botao-concluir" onClick={()=>console.log("concluir")}/>
+          <img src= {concluirSVG} className="card-tarefa-botao-concluir" onClick={this.concluir.bind(this)}/>
 
           <img src= {editarSVG} className="card-tarefa-botao-editar" onClick={this.alterar.bind(this)}/>
 

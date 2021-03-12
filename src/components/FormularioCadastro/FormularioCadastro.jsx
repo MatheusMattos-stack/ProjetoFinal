@@ -12,6 +12,7 @@ class FormularioCadastro extends Component {
   }
   
   componentDidUpdate(prevState) {
+
     if (this.props.editText !== '' && this.state.original === '') {
       this.setState({ original: this.props.editText });
     }
@@ -72,7 +73,7 @@ class FormularioCadastro extends Component {
 
       <button
         className="formulario-botao"
-        type="submit">{ this.state.editText ? 'Editar' : 'Adicionar' }</button>
+        type="submit">{ this.state.original ? 'Editar' : 'Adicionar' }</button>
       </form>
     );
   }

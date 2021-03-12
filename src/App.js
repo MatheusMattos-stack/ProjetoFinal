@@ -12,26 +12,28 @@ class App extends Component {
       notas:[],
       editText: "",
       editIndex: -1,
+      concluir: false,
     }
   }
 
 criarNota (nota) {
-    const novaNota = nota;
     const editIndex = this.state.editIndex;
 
     if (editIndex === -1) {
-      const novoArrayNotas = [...this.state.notas, novaNota]
+      const novoArrayNotas = [...this.state.notas, {texto : nota, concluir: false}]
       const novoEstado = { notas: novoArrayNotas }
       this.setState(novoEstado)
     }
     else { 
-        const novasNotas = [].concat(
-          this.state.notas.slice(0, editIndex),
-          novaNota,
-          this.state.notas.slice(editIndex + 1)
-        );
+        const tarefaConcluir = this.state.notas[editIndex]; 
+        const novoConcluir = [].concat(
+          
+        this.state.notas.slice(0, editIndex),
+        {texto: nota, concluir: tarefaConcluir.concluir},
+        this.state.notas.slice(editIndex + 1)
+      );  
 
-      this.setState({ notas: novasNotas });
+      this.setState({ notas: novoConcluir });
 
       this.setState({ editText: '', editIndex: -1 });
     }
@@ -53,8 +55,19 @@ deletarLista(index){
 alterarNota (indice) {
   const nota = this.state.notas[indice];
   this.setState({editIndex: indice})
-  this.setState({editText: nota})
+  this.setState({editText: nota.texto})
 }
+
+concluirNota (index) {
+  let concluirOriginal = this.state.notas[index]; 
+  const NovaNota = [].concat(
+    this.state.notas.slice(0, index),
+    {texto: concluirOriginal.texto, concluir: !concluirOriginal.concluir},
+    this.state.notas.slice(index + 1)
+  ); 
+  this.setState({notas:NovaNota}); 
+}  
+
 
 render() {
     return (
@@ -68,6 +81,7 @@ render() {
         deletarLista={this.deletarLista.bind(this)}
         alterarNota={this.alterarNota.bind(this)}
         deletarNota={this.deletarNota.bind(this)}
+        concluirNota={this.concluirNota.bind(this)}
         notas={this.state.notas}/>
         
       </section>
